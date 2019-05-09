@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 7798542973419256301}
   m_LocalRotation: {x: 0.22028118, y: 0.19750658, z: -0.045597993, w: 0.95414263}
   m_LocalPosition: {x: -0.164, y: 0, z: 0.3}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -105,5 +105,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationInfo:
-    XSpin: 0.99
-    YSpin: 2.41
+    XSpin: 60
+    YSpin: 120
