@@ -6,7 +6,7 @@ public class Follow : MonoBehaviour
 {
     public GameObject target;
     private Vector3 startPosition;
-    private Quaternion startRotation;
+    private Vector3 startRotation;
     private Vector2 mousePosPrevious;
 
     // Start is called before the first frame update
@@ -14,7 +14,7 @@ public class Follow : MonoBehaviour
     {
         mousePosPrevious = Input.mousePosition;
         startPosition =  this.transform.position - target.transform.position;
-        startRotation = this.transform.rotation;
+        startRotation = this.transform.rotation.eulerAngles;
     }
 
     // Update is called once per frame
@@ -23,9 +23,9 @@ public class Follow : MonoBehaviour
         if (Input.GetMouseButton(1))
         {
             Vector2 mousePosCurrent = Input.mousePosition;
-            startRotation = Quaternion.Euler(startRotation.x, mousePosPrevious.x - mousePosCurrent.x, startRotation.z);
+            startRotation.y = (mousePosPrevious.x - mousePosCurrent.x)/10;
         }
         this.transform.position = target.transform.position + startPosition;
-        this.transform.rotation = startRotation;
+        this.transform.rotation = Quaternion.Euler(startRotation);
     }
 }
