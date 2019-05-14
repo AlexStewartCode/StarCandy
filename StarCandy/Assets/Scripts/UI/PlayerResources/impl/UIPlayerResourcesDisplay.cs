@@ -1,24 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Numerics;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using System.Collections.ObjectModel;
-using System;
 
-namespace StarCandy
+
+namespace StarCandy.UI.impl
 {
-    [System.Serializable]
-    public class ResourceEntry : IUIResourceDisplayable
-    {
-        public string name;
-        public long value;
-
-        public string Name => name;
-        public BigInteger Value => value;
-
-        public Action OnValueChanged { get; set; }
-    }
-
     public class UIPlayerResourcesDisplay : MonoBehaviour
     {
         // Debug
@@ -33,7 +18,7 @@ namespace StarCandy
 
         // Public variables
         [Header("Displayable")]
-        public List<ResourceEntry> playerResources = new List<ResourceEntry>();
+        public List<PlayerResourceEntry> playerResources = new List<PlayerResourceEntry>();
 
         // Start is called before the first frame update
         void Start()
@@ -50,7 +35,7 @@ namespace StarCandy
         {
             if (debugEnabled)
             {
-                foreach (ResourceEntry entry in playerResources)
+                foreach (PlayerResourceEntry entry in playerResources)
                     entry.OnValueChanged?.Invoke();
             }
         }
@@ -67,7 +52,7 @@ namespace StarCandy
             // Create all the objects
             for (int i = 0; i < playerResources.Count; ++i)
             {
-                ResourceEntry entry = playerResources[i];
+                PlayerResourceEntry entry = playerResources[i];
 
                 UIPlayerResourceItem display = Instantiate(referenceObject, collectionArea.transform, false);
                 display.DisplayObject = entry;
@@ -79,7 +64,7 @@ namespace StarCandy
         }
 
         // Callback function
-        void UpdateResouceEntry(ResourceEntry entry, int changeAmount)
+        void UpdateResouceEntry(PlayerResourceEntry entry, int changeAmount)
         {
             entry.value += changeAmount;
             entry.OnValueChanged?.Invoke();
