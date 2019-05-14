@@ -1,18 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Numerics;
 
-public class IUIResourceDisplayable : MonoBehaviour
+public interface IUIResourceDisplayable
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    string Name { get; }
+    BigInteger Value { get; }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    System.Action OnValueChanged { get; set; }
 }
