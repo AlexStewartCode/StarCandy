@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System;
 
 
 namespace StarCandy.UI.impl
@@ -60,7 +61,7 @@ namespace StarCandy.UI.impl
         private void UpdateValues()
         {
             nameText.text = displayObject.Name;
-            valueText.text = "" + displayObject.Value;
+            valueText.text = String.Format("{0:#,##0}", displayObject.Value); // Adds commas, so 1234 displays as 1,234
             icon.sprite = displayObject.Icon; 
         }
     }

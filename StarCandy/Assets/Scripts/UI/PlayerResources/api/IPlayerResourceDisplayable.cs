@@ -10,7 +10,7 @@ namespace StarCandy.UI
         BigInteger Value { get; } // Whole number value of the resource
         Sprite Icon { get; }      // Resource icon - if null, none is displayed.
 
-        // Is called when one of the fields above changes
+        // This is to be called when changes to above fields need to be propogated.
         System.Action OnValueChanged { get; set; }
     }
 }
