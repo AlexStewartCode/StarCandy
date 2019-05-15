@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Prototypes/SpinDemo.unity
-    guid: 8322283166e61fc40b58e9fce78778cc
+    path: Assets/Scenes/MenuMain.unity
+    guid: 5d13ee64311d25d4a96219e03fda37c2
+  - enabled: 1
+    path: Assets/Scenes/GameLanding.unity
+    guid: 78c95df4c5f98c840a0e8b53bd1c7063
+  - enabled: 1
+    path: Assets/Scenes/Globals.unity
+    guid: 56a1d29a8aa10ab4a92a0ec17b1c7588
   m_configObjects: {}

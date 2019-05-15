@@ -12,7 +12,9 @@ namespace StarCandy
     {
         public string sceneName;
         public bool loadAsync = false;
+        public LoadSceneMode loadMode = LoadSceneMode.Additive;
 
+        // Runs before Start()
         void Awake()
         {
             if (sceneName != null && sceneName.Length > 0)
@@ -20,7 +22,7 @@ namespace StarCandy
                 if (loadAsync)
                     SceneManager.LoadSceneAsync(sceneName);
                 else
-                    SceneManager.LoadScene(sceneName);
+                    SceneManager.LoadScene(sceneName, loadMode);
             }
             else
             {
