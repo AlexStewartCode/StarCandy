@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SpinDemo.unity
+    path: Assets/Scenes/Prototypes/SpinDemo.unity
     guid: 8322283166e61fc40b58e9fce78778cc
   m_configObjects: {}
