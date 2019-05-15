@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: ae833cc84b100a5439969b6f3bd19b76
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Kodchasan Medium
+  fontNames:
+  - Kodchasan Medium
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 364ecb68e30f5d14dac81dfcaae482c0, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
